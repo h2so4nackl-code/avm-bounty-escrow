@@ -1,0 +1,17 @@
+[workspace]
+members = ["contracts/escrow", "contracts/receiver", "tests", "vendor/avm-contract-sdk"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+license-file = "vendor/SDK-LICENSE.md"
+rust-version = "1.86.0"
+version = "0.1.0"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+

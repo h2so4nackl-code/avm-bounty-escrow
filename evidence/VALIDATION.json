@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "project_tests": 35,
+  "sdk_tests": 12,
+  "total_tests": 47,
+  "action_sequence_cases": 8000,
+  "accounting": {
+    "funded": 1000,
+    "paid": 700,
+    "refunded": 300,
+    "pending": 0,
+    "attempts": 5,
+    "phases": [
+      3,
+      3,
+      4
+    ]
+  },
+  "actual_avm_accepted_input_count": 37,
+  "replay_roots_and_fees_match": true,
+  "builder_reproducibility": "official two-build comparison per contract",
+  "ci_hosted_run": "not run",
+  "mainnet_deployment": "not performed",
+  "third_party_security_audit": "not performed",
+  "runtime_scope": "pinned local stand only"
+}

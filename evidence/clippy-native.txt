@@ -1,0 +1,5 @@
+    Checking avm-contract-sdk v0.1.0 (/workspace/scratch/e13110dd4624/avm-bounty-escrow/vendor/avm-contract-sdk)
+    Checking avm-bounty-escrow v0.1.0 (/workspace/scratch/e13110dd4624/avm-bounty-escrow/contracts/escrow)
+    Checking avm-bounty-receiver v0.1.0 (/workspace/scratch/e13110dd4624/avm-bounty-escrow/contracts/receiver)
+    Checking avm-bounty-tests v0.1.0 (/workspace/scratch/e13110dd4624/avm-bounty-escrow/tests)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.60s
