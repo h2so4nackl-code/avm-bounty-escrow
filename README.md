@@ -27,6 +27,8 @@ delivery. It is a test fixture, not a general-purpose wallet.
 
 ## Verified result
 
+### Local validation
+
 Local validation on 12 October 2026:
 
 | Check | Result |
@@ -46,6 +48,20 @@ See [`evidence/`](evidence/). Failed contract calls are checked by their canonic
 `ACMO` status and state, not merely by the stand command's outer `status: ok`.
 The main-value amounts above are synthetic local test units. They do not establish
 a denomination or live NACKL balance. Execution SHELL is accounted separately.
+
+### GitHub Actions
+
+The GitHub-hosted [AVM escrow checks run 38196158944](https://github.com/h2so4nackl-code/avm-bounty-escrow/actions/runs/38196158944)
+completed successfully on 12 October 2026 at 02:32 UTC for commit
+[`054300d719445a0f3c1229f63e033cc59a8c0d80`](https://github.com/h2so4nackl-code/avm-bounty-escrow/commit/054300d719445a0f3c1229f63e033cc59a8c0d80).
+The `verify` job installed the pinned Rust toolchain, downloaded and verified the
+pinned AVM runtime, and ran `bash scripts/check.sh`. Its logs confirm 35 project
+regression tests and 12 SDK tests passed, contract builds and lint checks passed,
+and the actual local AVM stand journey and WASM artifact checks passed.
+
+This hosted execution is separate from the historical local results and files in
+[`evidence/`](evidence/) above. It does not establish an independent security audit,
+mainnet deployment, or production use.
 
 ## Run it
 
@@ -127,8 +143,8 @@ Those build directories are ignored by Git; source reproduction is authoritative
   remains responsible for approving the work.
 - Callback authenticity depends on the AVM runtime admitting native callbacks
   and forbidding ordinary callers from injecting VM-owned queue messages.
-- No mainnet deployment, third-party security audit, reward eligibility decision,
-  or GitHub-hosted CI run is claimed. A CI workflow is included for publication.
+- No mainnet deployment, third-party security audit, production use, or reward
+  eligibility decision is claimed. GitHub-hosted validation is recorded above.
 
 ## Official references
 
