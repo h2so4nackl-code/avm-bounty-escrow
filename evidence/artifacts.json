@@ -11,11 +11,11 @@
       ],
       "host_imports": 0,
       "sha256": {
-        "contract.wasm": "2cfc7e8e34257ec03ae2b14920b14185b3e89b1a3ed53f50a9241fc80bdd6d6a",
+        "contract.wasm": "b2581a349985d71254f8d98f83e8b137290e3a12cb7375d45b65e4cd3bb69af9",
         "contract.acab": "116a73ca267c1c7fd4128ae37059516283ccc6de20a5401386cf7be47f828a95",
         "contract.descriptor": "5f82f8befe396d0a21ece803f39ad03ea861a69e67ef4b0dbc8509a56a1803fe"
       },
-      "wasm_bytes": 52111
+      "wasm_bytes": 53078
     },
     "receiver": {
       "exports": [
@@ -27,11 +27,11 @@
       ],
       "host_imports": 0,
       "sha256": {
-        "contract.wasm": "67be123aeda3132d2edcad48b5659c47ba509162f3c6c12e435fa662b2aefa00",
+        "contract.wasm": "45b2384e482c47d86844dfff804ef2562ce9bf9004e95b236ab614dba6fc96f7",
         "contract.acab": "708fed4aee3a4310a8875da668c72dee0d2aadc14d924aa135b9e3fc1eeb8883",
         "contract.descriptor": "76ab2ed990fab0a31c8d3f43792a86d8f72449001a047193e8f8579a13cdd462"
       },
-      "wasm_bytes": 38682
+      "wasm_bytes": 39645
     }
   }
 }

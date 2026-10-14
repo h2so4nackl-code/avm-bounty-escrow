@@ -28,3 +28,10 @@ tests, pinned SDK source, reproducible AVM artifacts, an actual local-stand jour
 and matching journal replay evidence. It is proposed as an SDK test-suite example,
 with its limits and runtime trust assumptions documented. No mainnet deployment
 or third-party audit is claimed.
+
+## SDK 0.2.0
+
+See [the standalone compatibility result](SDK-020.md). In-tree integration must
+use the current SDK path dependency and reviewed lock, without RUSTC_WRAPPER.
+The existing upstream integration PR is #9. Its approval and validation
+are separate from these standalone checks.

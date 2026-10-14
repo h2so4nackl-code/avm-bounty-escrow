@@ -3,7 +3,7 @@
 Pachetul conține contractul Rust AVM, receptorul de test, codul sursă, artefactele
 WASM/ABI/descriptor și dovezile verificărilor locale.
 
-- 35 teste ale proiectului și 12 teste ale SDK-ului au trecut.
+- 35 teste ale proiectului și 13 teste ale SDK-ului au trecut.
 - Ambele contracte sunt construite de compilatorul oficial AVM, cu verificarea
   reproductibilității.
 - Testul AVM local verifică plăți și rambursări refuzate, reîncercări, operații
@@ -22,3 +22,5 @@ Următorul pas pentru participarea la oferta din postare este publicarea codului
 într-un repository GitHub și trimiterea linkului. Descrierea pentru dezvoltatori
 este pregătită în `docs/SDK-INTEGRATION.md`. Pachetul nu a fost publicat și nu a
 fost trimis nimănui.
+
+Compatibilitatea a fost verificată cu SDK 0.2.0 și guest SDK 0.1.1, într-un stand local nou.

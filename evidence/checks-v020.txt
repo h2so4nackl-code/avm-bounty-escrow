@@ -1,0 +1,125 @@
+rustc 1.93.0 (254b59607 2026-01-19)
+SDK 0.2.0 / guest 0.1.1, profile, source hashes and reviewed lock: PASS
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.01s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running unittests src/lib.rs (target/debug/deps/avm_bounty_escrow-f1ce219365c6d051)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/avm_bounty_receiver-50c35b7fd4dbd4d1)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/avm_bounty_tests-50568ab4f5eedfc3)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/regression.rs (target/debug/deps/regression-a9513bcb7a7a4370)
+
+running 35 tests
+test config_rejects_overflow_and_wrong_total ... ok
+test approving_an_old_revision_fails ... ok
+test config_rejects_zero_or_duplicate_identities ... ok
+test config_rejects_invalid_count_and_amounts ... ok
+test approval_requires_owner_and_submission ... ok
+test config_and_state_reject_truncation_without_panics ... ok
+test config_rejects_zero_or_alias_destinations ... ok
+test config_roundtrip_and_state_roundtrip ... ok
+test corruption_of_accounting_or_pending_fields_fails_closed ... ok
+test external_callback_impersonation_is_rejected ... ok
+test deadline_is_exclusive_for_submit_and_approve ... ok
+test deployment_envelope_lengths_are_checked ... ok
+test failure_without_exact_return_cannot_unlock ... ok
+test failed_refund_keeps_unapproved_balance_claimable ... ok
+test failed_transfer_returns_principal_and_can_retry ... ok
+test init_requires_owner_signature ... ok
+test funding_is_exact_and_once ... ok
+test funding_requires_owner_and_live_deadline ... ok
+test only_shell_can_be_donated_to_execution_fees ... ok
+test pay_requires_approval_and_authorization ... ok
+test ordinary_internal_message_cannot_impersonate_callback ... ok
+test old_failure_cannot_settle_a_new_attempt ... ok
+test payout_refuses_insolvent_principal_or_missing_fee_reserve ... ok
+test reserved_config_and_state_bytes_are_canonical ... ok
+test receiver_binding_is_owner_only_and_immutable ... ok
+test pending_transfer_blocks_second_payment_and_refund ... ok
+test refund_excludes_approved_work_and_allows_late_payment ... ok
+test malformed_arguments_and_attached_value_have_no_effects ... ok
+test status_is_nonmutating_and_available_while_pending ... ok
+test unfunded_contract_rejects_work_and_refund ... ok
+test submit_requires_worker_and_nonzero_hash ... ok
+test wrong_receiver_and_wrong_receipt_are_rejected ... ok
+test successful_callback_settles_once ... ok
+test attempt_budget_is_bounded_without_forgetting_old_receipts ... ok
+test generated_action_sequences_preserve_principal_conservation ... ok
+
+test result: ok. 35 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.32s
+
+     Running unittests src/lib.rs (target/debug/deps/avm_contract_sdk-82d4ea57941401e9)
+
+running 9 tests
+test output::work::checked_sizes_reject_arithmetic_overflow ... ok
+test runtime::tests::bounded_writer_failures_release_only_the_output_reservation ... ok
+test runtime::tests::direct_dispatch_writes_once_without_the_vec_growth_path ... ok
+test runtime::tests::batch_dispatch_preserves_count_mode_and_failed_index_checks ... ok
+test runtime::tests::direct_message_sections_and_batch_match_the_public_serializer ... ok
+test runtime::tests::dispatch_preserves_live_input_and_lifo_output_ownership ... ok
+test runtime::tests::dispatch_failure_capacity_and_overflow_leave_input_owned ... ok
+test runtime::tests::input_copy_preserves_bytes_and_live_bounds_at_chunk_boundaries ... ok
+test runtime::tests::ten_thousand_wallet_sized_outputs_remove_observed_vec_growth_and_copy ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.50s
+
+     Running tests/canonical_io.rs (target/debug/deps/canonical_io-8dacfcc982bfa604)
+
+running 4 tests
+test malformed_or_noncanonical_frames_fail_closed ... ok
+test acmi_decode_and_acmo_encode_cover_all_effect_sections ... ok
+test output_bytes_and_error_precedence_are_frozen ... ok
+test acbi_decode_and_acbo_encode_preserve_indexes_and_statuses ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests avm_bounty_escrow
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests avm_bounty_receiver
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests avm_bounty_tests
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests avm_contract_sdk
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+contract.wasm a31ebad0ea69bafa7006531de712690220098555f2042343e0b87a3fe08c6565
+contract.acab 0e6d5296bf3f47c4d34879e3ce67cf35469e99f44384ec1e8adfcbaa9c24ddd1
+contract.descriptor cf269c23c7e0f6b84475c201cf3b75b789593b3ad21fe17765f0fe3222411125
+contract.wasm e2cf37336ad1aff6ba7d2204a9da463f9583d36c8191aa0f7d4df5af62f6c97d
+contract.acab 419e6fbd37c9467f22c7183260757f5fe37a221961d240174131ff9bb0f123e9
+contract.descriptor 92c30162a58d7afac66fbd74af68409b9385de491615fcdfcbba9312d8d810f4
+Canonical method/event IDs: PASS
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.08s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.01s
+AVM journey PASS: /workspace/scratch/e13110dd4624/avm-bounty-escrow-v020/evidence/avm-e2e.json
+WASM exports, absence of host imports, and artifact SHA-256: PASS
+SDK 0.2.0 summary PASS: 35 application + 13 SDK = 48 tests; actual AVM journey/replay PASS
+All local checks passed.

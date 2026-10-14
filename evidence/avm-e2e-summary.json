@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "accounting": {
+    "funded": 1000,
+    "paid": 700,
+    "refunded": 300,
+    "pending": 0,
+    "attempts": 5,
+    "phases": [
+      3,
+      3,
+      4
+    ]
+  },
+  "escrow": "1111111111111111111111111111111111111111111111111111111111111111:dabd89f753a827a34ddf08e384b9b40a6137a4fa463e935445314eb01b23a274",
+  "inspect": {
+    "account_state_root": "77b88685f95092c32b0a01f6f6698782cb2527b6a5574aa34fba4092f34c903e",
+    "registry_root": "0595286e6d3ac8f1cd9a3df1d0b635012107f62a9b774f642a00d9991af2f8d0",
+    "accepted_input_count": 37,
+    "cumulative_fee_shells": "614043"
+  },
+  "replay": {
+    "account_state_root": "77b88685f95092c32b0a01f6f6698782cb2527b6a5574aa34fba4092f34c903e",
+    "registry_root": "0595286e6d3ac8f1cd9a3df1d0b635012107f62a9b774f642a00d9991af2f8d0",
+    "accepted_input_count": 37,
+    "cumulative_fee_shells": "614043"
+  },
+  "queue_message_count": 0,
+  "full_journal": "avm-e2e.json.gz"
+}

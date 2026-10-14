@@ -1,10 +1,12 @@
 {
   "status": "PASS",
+  "project": "avm-bounty-escrow",
+  "sdk_bundle_version": "0.2.0",
+  "guest_sdk_version": "0.1.1",
   "project_tests": 35,
-  "sdk_tests": 12,
-  "total_tests": 47,
-  "action_sequence_cases": 8000,
-  "accounting": {
+  "sdk_tests": 13,
+  "total_tests": 48,
+  "actual_avm_accounting": {
     "funded": 1000,
     "paid": 700,
     "refunded": 300,
@@ -16,11 +18,46 @@
       4
     ]
   },
-  "actual_avm_accepted_input_count": 37,
-  "replay_roots_and_fees_match": true,
-  "builder_reproducibility": "official two-build comparison per contract",
-  "ci_hosted_run": "not run",
-  "mainnet_deployment": "not performed",
-  "third_party_security_audit": "not performed",
-  "runtime_scope": "pinned local stand only"
+  "replay_roots_fees_and_count_match": true,
+  "queue_message_count": 0,
+  "fresh_local_stand": true,
+  "full_journal": "avm-e2e.json.gz",
+  "full_journal_sha256": "d941b05c526ebe0e69329becbdbbbfb40fb60ae6bd19c7f18b9837a91978d4f7",
+  "artifacts": {
+    "escrow": {
+      "exports": [
+        "memory",
+        "avm_guest_alloc",
+        "avm_guest_free",
+        "init",
+        "process_message"
+      ],
+      "host_imports": 0,
+      "sha256": {
+        "contract.wasm": "b2581a349985d71254f8d98f83e8b137290e3a12cb7375d45b65e4cd3bb69af9",
+        "contract.acab": "116a73ca267c1c7fd4128ae37059516283ccc6de20a5401386cf7be47f828a95",
+        "contract.descriptor": "5f82f8befe396d0a21ece803f39ad03ea861a69e67ef4b0dbc8509a56a1803fe"
+      },
+      "wasm_bytes": 53078
+    },
+    "receiver": {
+      "exports": [
+        "memory",
+        "avm_guest_alloc",
+        "avm_guest_free",
+        "init",
+        "process_message"
+      ],
+      "host_imports": 0,
+      "sha256": {
+        "contract.wasm": "45b2384e482c47d86844dfff804ef2562ce9bf9004e95b236ab614dba6fc96f7",
+        "contract.acab": "708fed4aee3a4310a8875da668c72dee0d2aadc14d924aa135b9e3fc1eeb8883",
+        "contract.descriptor": "76ab2ed990fab0a31c8d3f43792a86d8f72449001a047193e8f8579a13cdd462"
+      },
+      "wasm_bytes": 39645
+    }
+  },
+  "runtime_scope": "Published SDK 0.2.0 local stand; synthetic principal, same DApp",
+  "mainnet_deployment": false,
+  "upstream_approval_claimed": false
 }

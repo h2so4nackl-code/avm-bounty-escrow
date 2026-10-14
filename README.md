@@ -5,6 +5,14 @@ asynchronous payment settlement, expired-balance refunds, and a real local-stand
 regression journey. Designed as a useful candidate for the `gosh-sh/avm-sdk` test
 suite. This is a tested SDK example, not an audited financial product.
 
+## SDK 0.2.0 compatibility
+
+Verified on 14 October 2026 with the published SDK 0.2.0 bundle and its guest SDK
+0.1.1: **35 application + 13 SDK = 48 native tests**, all contract builds and
+lints, and the actual AVM journey/replay passed. [Migration and provenance](docs/SDK-020.md)
+record the exact tools, profile and limitations. [GitHub Actions](https://github.com/h2so4nackl-code/avm-bounty-escrow/actions)
+provides the current hosted result. The application contract logic is unchanged.
+
 ## What it demonstrates
 
 - The client funds the complete bounty once, using `value_main`.
@@ -29,12 +37,12 @@ delivery. It is a test fixture, not a general-purpose wallet.
 
 ### Local validation
 
-Local validation on 12 October 2026:
+Current local validation on SDK 0.2.0, 14 October 2026:
 
 | Check | Result |
 | --- | --- |
 | Project native regression tests | 35 passed |
-| Unmodified vendored SDK tests | 12 passed |
+| Unmodified vendored SDK tests | 13 passed |
 | Generated action sequence coverage | 100 sequences × 80 actions inside one regression test |
 | Official reproducible builder | Both contract artifact triples produced |
 | Native and WASM Clippy | No warnings under `-D warnings` |
@@ -65,7 +73,7 @@ mainnet deployment, or production use.
 
 ## Run it
 
-Requirements: Linux x86-64 (Windows: WSL2), Rustup, Python 3, curl, tar, sha256sum.
+Requirements: Linux x86-64-v3, glibc >=2.39 (Windows: WSL2), Rust/Cargo 1.93.0, Python >=3.11, curl and sha256sum.
 No crates.io dependencies are needed; the SDK source is vendored.
 
 ```bash
@@ -97,16 +105,15 @@ cargo test --workspace --offline
 ## SDK versions
 
 - Vendored `avm-contract-sdk`: `gosh-sh/avm-sdk`
-  commit `72ee42dbf923f081bf29b4a1a1b6ea012b6af54f`.
+  commit `0748f4f0767a26da8bc363bcb6b5585539d6970e`.
 - Published builder/stand release:
-  `avm-dev-335a0f09fdbc-sdk-0cbca40fad9a`.
+  `avm-dev-06e96ef71006-sdk-0748f4f0767a`.
 - Runtime source revision recorded by that release:
-  `335a0f09fdbc98eb7a1056c0f6b84cd4f39d889e`.
-- Release SDK revision: `0cbca40fad9a8f11863197cbcbaf6208651752b9`.
+  `06e96ef71006cca020575cbf35e6b82cc82a324e`.
+- Release SDK revision: `0748f4f0767a26da8bc363bcb6b5585539d6970e`.
 
-The source SDK and published runtime are different revisions. The included E2E
-evidence validates this exact combination; it does not claim compatibility with
-an unpublished runtime. [`PROVENANCE.json`](PROVENANCE.json) records the pins.
+Vendored guest source matches the published bundle SDK revision. The included
+E2E evidence uses the shipped SDK 0.2.0 runtime and profile in a fresh stand. [`PROVENANCE.json`](PROVENANCE.json) records the pins.
 
 ## Layout
 
@@ -149,9 +156,9 @@ Those build directories are ignored by Git; source reproduction is authoritative
 ## Official references
 
 - [SDK repository](https://github.com/gosh-sh/avm-sdk)
-- [Pinned source](https://github.com/gosh-sh/avm-sdk/tree/72ee42dbf923f081bf29b4a1a1b6ea012b6af54f)
-- [Published runtime release](https://github.com/gosh-sh/avm-sdk/releases/tag/avm-dev-335a0f09fdbc-sdk-0cbca40fad9a)
-- [Examples](https://github.com/gosh-sh/avm-sdk/blob/72ee42dbf923f081bf29b4a1a1b6ea012b6af54f/examples/README.md)
-- [FUEL and SHELL](https://github.com/gosh-sh/avm-sdk/blob/72ee42dbf923f081bf29b4a1a1b6ea012b6af54f/docs/fuel-and-fees.md)
+- [Pinned source](https://github.com/gosh-sh/avm-sdk/tree/0748f4f0767a26da8bc363bcb6b5585539d6970e)
+- [Published runtime release](https://github.com/gosh-sh/avm-sdk/releases/tag/avm-dev-06e96ef71006-sdk-0748f4f0767a)
+- [Examples](https://github.com/gosh-sh/avm-sdk/blob/0748f4f0767a26da8bc363bcb6b5585539d6970e/examples/README.md)
+- [FUEL and SHELL](https://github.com/gosh-sh/avm-sdk/blob/0748f4f0767a26da8bc363bcb6b5585539d6970e/docs/fuel-and-fees.md)
 
 MIT licensed. The vendored SDK retains its upstream license.
